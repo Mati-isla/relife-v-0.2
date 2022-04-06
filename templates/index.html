@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'estilos.css'%}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mx-auto" href="index.html">Re<span>Life®</span></a>
+                <div class="collapse navbar-collapse" id="navbarCollapse1">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"> <a class="nav-link" href="#myCarousel">Inicio <span class="sr-only">(current)</span></a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#benefits">Beneficios</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#informacion">¿Que es reciclar?</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#about">Quienes Somos</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#gallery">Contacto</a> </li>
+                    
+                    {% if user.is_anonymous %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Inicio sesion</a>
+                        </li>
+                        {% endif %} {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href='cuenta.html'>Mi cuenta</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Cerrar sesion</a>
+                        </li>
+                        
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+
+<!-- Swiper Silder
+    ================================================== -->
+<!-- Slider main container -->
+<div class="swiper-container main-slider" id="myCarousel">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slider-bg-position" style="background:url('https://mma.gob.cl/wp-content/uploads/2020/09/EncuestaCiudadana_banner-1500x711.png')" data-hash="slide1">
+    </div>
+    <div class="swiper-slide slider-bg-position" style="background:url('https://cdn1.contex.com.co/wp-content/uploads/2019/12/ReciclaConElCorazon.jpg')" data-hash="slide2">
+
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
+  <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
+</div>
+<!-- Benefits
+    ================================================== -->
+<section class="service-sec" id="benefits">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading">
+      <h2>Beneficios del reciclaje<small><br>Reciclar ayuda a disminuir la contaminación del aire y el agua. El reciclaje genera puestos formales de trabajo. Por cada tonelada de papel que se recicla se salvan 17 árboles. Si reciclamos aumentamos la vida útil de los rellenos sanitarios.</small></h2>
+    </div>
+        </div>
+      <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 text-md-center service-block"> <i class="fa fa-plus" aria-hidden="true"></i>
+          <h3>Mejor calidad de vida</h3>
+          <p>El reciclaje, la reutilización y la recuperación son actividades que apoyan el desarrollo de un nuevo sector económico, a partir del adecuado tratamiento y valoración de los residuos para mejorar la calidad de vida.</p>
+        </div>
+        <div class="col-md-6 text-md-center service-block"> <i class="fa fa-leaf" aria-hidden="true"></i>
+          <h3>Reduce la contaminación</h3>
+          <p>El reciclaje permite no sustraer nueva materia prima para fabricación y se puede simplemente reciclar la materia existente. Se reduce la contaminación, proporcionando una atmósfera más limpia. Reciclando ayudamos a reducir el daño producido al medio ambiente.</p>
+        </div>
+        <div class="col-md-6 text-md-center service-block"> <i class="fa fa-leaf" aria-hidden="true"></i>
+          <h3>Productos reutilizables</h3>
+          <p>El proceso de reciclaje parte de una selección entre aquellos materiales que pueden tener otra oportunidad de uso y los que son desecho, tras ser depositados en los contenedores correspondientes. En las casas podemos colocar varios contenedores, uno para los desechos orgánicos y otros para los materiales que puedan reusarse.</p>
+        </div>
+        <div class="col-md-6 text-md-center service-block"> <i class="fa fa-bell" aria-hidden="true"></i>
+          <h3>Energias Renovables</h3>
+          <p>Son aquellas que provienen de fuentes consideradas inagotables, y que se caracterizan porque en sus procesos de transformación y aprovechamiento no se consumen a escala humana, ya sea por la inmensa cantidad de energía que contienen o porque son capaces de regenerarse en el tiempo.</p>
+        </div>
+        </div>
+        </div>
+
+
+    <!-- /.row -->
+  </div>
+</section>
+
+        <br>
+<!-- About
+    ================================================== -->
+        s
+<section class="about-sec parallax-section" >
+    <section id="informacion">
+    <div class="container" >
+        <div class="row">
+            <h4>Información</h4>
+            <div class="col align-self-center" > <img src="https://pbs.twimg.com/media/EehzFDKX0AE7q0B.jpg"/> </div>
+        </div>
+    </div>
+</section>
+    <section id="about">
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-3">
+        <h2><small>¿Quienes somos?</small>Recicla<br>
+          La Vida</h2>
+      </div>
+      <div class="col-md-4">
+        <p>Somos una empresa formada por 4 estudiantes de ingenieria en informatica, que se unieron para dar una solución a las diferentes problematicas relacionas con el reciclaje.</p>
+        <p>Lo que buscamos como empresa consiste en reutilizar basura desde tu hogar. La cual se convertira en nuevos productos reutilizados para la venta  .</p>
+      </div>
+      <div class="col-md-4">
+        <p>Nuestra idea es que mediante tu basura puedas recibir dinero para comprar comida y elementos de higienización en lugares establecidos.</p>
+        <p>Esta solución nos permitira ayudar al medio ambiente y por supuesto ayudarte a ti como persona y economicamentes - Tu solo danos tu basura nosotros nos preocupamos de lo demas.</p>
+        <p><a href="https://rechile.mma.gob.cl" class="btn btn-transparent-white btn-capsul">Explora Mas</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<section style="text-align: center;" class="service-sec">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-md-12">
+                <div  style="border-bottom: 5px"><h2>Encuentra los diferentes puntos en:</h2><br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8650867029896!2d-71.5353727851228!3d-33.03368468362896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689de64d74fd4af%3A0x8004f381e9055a38!2sDuoc%20UC%3A%20Sede%20Vi%C3%B1a%20Del%20Mar!5e0!3m2!1ses-419!2scl!4v1648784736866!5m2!1ses-419!2scl" width="600" height="450" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </div>
+      
+    </div>
+</section>
+<!--footer starts from here-->
+<footer class="footer">
+<div class="container bottom_border">
+<div class="row">
+<div class=" col-sm-4 col-md col-sm-4  col-12 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+<!--headin5_amrc-->
+<p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+<p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+<p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+<p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+
+
+</div>
+
+
+<div class=" col-sm-4 col-md  col-6 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+<!--headin5_amrc-->
+<ul class="footer_ul_amrc">
+<li><a href="http://webenlance.com">Image Rectoucing</a></li>
+<li><a href="http://webenlance.com">Clipping Path</a></li>
+<li><a href="http://webenlance.com">Hollow Man Montage</a></li>
+<li><a href="http://webenlance.com">Ebay & Amazon</a></li>
+<li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+<li><a href="http://webenlance.com">Image Cropping</a></li>
+</ul>
+<!--footer_ul_amrc ends here-->
+</div>
+
+
+<div class=" col-sm-4 col-md  col-6 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+<!--headin5_amrc-->
+<ul class="footer_ul_amrc">
+<li><a href="http://webenlance.com">Remove Background</a></li>
+<li><a href="http://webenlance.com">Shadows & Mirror Reflection</a></li>
+<li><a href="http://webenlance.com">Logo Design</a></li>
+<li><a href="http://webenlance.com">Vectorization</a></li>
+<li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+<li><a href="http://webenlance.com">Image Cropping</a></li>
+</ul>
+<!--footer_ul_amrc ends here-->
+</div>
+
+
+<div class=" col-sm-4 col-md  col-12 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+<!--headin5_amrc ends here-->
+
+<ul class="footer_ul2_amrc">
+<li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+<li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+<li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+</ul>
+<!--footer_ul2_amrc ends here-->
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<ul class="foote_bottom_ul_amrc">
+<li><a href="http://webenlance.com">Home</a></li>
+<li><a href="http://webenlance.com">About</a></li>
+<li><a href="http://webenlance.com">Services</a></li>
+<li><a href="http://webenlance.com">Pricing</a></li>
+<li><a href="http://webenlance.com">Blog</a></li>
+<li><a href="http://webenlance.com">Contact</a></li>
+</ul>
+<!--foote_bottom_ul_amrc ends here-->
+<p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+
+<ul class="social_footer_ul">
+<li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+<li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+<li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+</ul>
+<!--social_footer_ul ends here-->
+</div>
+
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="{%static '/js/script.js'%}"></script>
+</body>
+</html>
